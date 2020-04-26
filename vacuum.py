@@ -121,7 +121,7 @@ STATE_CODE_TO_STATE = {
     7: STATE_CLEANING   # Mop only
 }
 
-ALL_PROPS = ["run_state", "mode", "err_state", "battery_life", "box_type", "mop_type", "s_time",
+ALL_PROPS = ["run_state", "mode", "err_state", "battary_life", "box_type", "mop_type", "s_time",
              "s_area", "suction_grade", "water_grade", "remember_map", "has_map", "is_mop", "has_newmap",
              "side_brush_life", "side_brush_hours", "main_brush_life", "main_brush_hours", "hypa_life", "hypa_hours", "mop_life", "mop_hours", "water_percent",
              "hw_info", "sw_info", "start_time", "order_time", "v_state", "zone_data", "repeat_state", "light_state", "is_charge", "is_work", "cur_mapid", "mop_route", "map_num"]
@@ -219,7 +219,7 @@ class MiroboVacuum2(StateVacuumDevice):
     def battery_level(self):
         """Return the battery level of the vacuum cleaner."""
         if self.vacuum_state is not None:
-            return self.vacuum_state['battery_life']
+            return self.vacuum_state['battary_life']
 
     @property
     def fan_speed(self):
